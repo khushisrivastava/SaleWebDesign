@@ -46,7 +46,7 @@ body{
 .plan h2{
     color: #858585;
 }
-.plan--highlighted .plan__title{
+.plan__title{
     color: white;
 }
 .plan--highlighted h2{
@@ -59,6 +59,24 @@ body{
 }
 .plan__features li{
     margin: 8px 0px;
+}
+.button{
+    background: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 1.5px #0e4f1f solid;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button:hover,
+.button:active{
+    background: white;
+    color: #0e4f1f;
+}
+.button:focus{
+    outline: none;
 }
 .main-header{
     background: #2ddf5c;
