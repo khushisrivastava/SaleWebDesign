@@ -19,6 +19,9 @@ body{
     color: white;
     font-family: 'Anton', sans-serif;
 }
+#plans{
+    text-align: center;
+}
 .plan{
    background: #d5ffdc;
    text-align: center;
@@ -77,6 +80,40 @@ body{
 }
 .button:focus{
     outline: none;
+}
+#key-features{
+    background: #ff1b68;
+    margin-top: 80px;
+    padding: 16px;
+}
+#key-features .section-title{
+    color: white;
+    margin: 32px;
+}
+.key-features__list{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.key-features__list li{
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+}
+.key-features__list div{
+    margin: auto;
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+}
+.key-features__list p{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
 }
 .main-header{
     background: #2ddf5c;
