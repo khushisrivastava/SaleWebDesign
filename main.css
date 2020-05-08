@@ -16,7 +16,8 @@
     text-align: center;
 }
 #product-overview h1{
-    color: rgb(51, 17, 4);
+    /* color: rgb(51, 17, 4); */
+    color: white;
     font-family: 'Anton', sans-serif;
     position: absolute;
     bottom: 5%;
