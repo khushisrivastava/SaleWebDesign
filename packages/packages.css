@@ -9,6 +9,9 @@ main{
     position: fixed;
     z-index: -1;
 }
+#plus{
+    margin-top: 38px;
+}
 .package{
     width: 80%;
     border: solid #0e4f1f 4px;
