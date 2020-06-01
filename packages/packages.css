@@ -1,5 +1,5 @@
 main{
-    padding-top: 32px;
+    padding-top: 2rem;
 }
 .background{
     background: url("../images/plans-background.jpg") center/cover;
@@ -10,13 +10,13 @@ main{
     z-index: -1;
 }
 #plus{
-    margin-top: 38px;
+    margin-top: 2.3rem;
 }
 .package{
     width: 80%;
     border: solid #0e4f1f 4px;
     border-left: none;
-    margin: 16px 0px;
+    margin: 1rem 0px;
     position: relative;
 }
 .package:hover,
@@ -28,14 +28,14 @@ main{
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 32px;
+    padding: 2.3rem;
 }
 .package__badge{
     position: absolute;
-    top: 0px;
-    right: 0px;
-    margin: 20px;
-    padding: 8px;
+    top: 0;
+    right: 0;
+    margin: 1.2rem;
+    padding: 0.5rem;
     color: white;
     background: #ff5454;
     font-size: 20px;
@@ -44,10 +44,10 @@ main{
     color: #979797;
 }
 .package__info{
-    padding: 16px;
+    padding: 1rem;
     border: 1px solid #0e4f1f;
     color: #0e4f1f;
-    font-size: 20px;
+    font-size: 1.2rem;
     background: white;
 }
 .clearfix{
