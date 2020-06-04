@@ -5,6 +5,9 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
+main{
+    min-height: calc(100vh - 3.1875rem - 8rem);
+}
 .backdrop{
     position: fixed;
     top: 0;
@@ -99,7 +102,7 @@ body{
 }
 .main-footer{
     background: black;
-    padding: 2rem;
+    padding: 1rem;
     margin-top: 3rem;
 }
 .main-footer ul{
@@ -110,7 +113,7 @@ body{
 }
 .main-footer li{
     display: block;
-    margin: 1rem 0;
+    margin-top: 1rem;
 }
 .main-footer a{
     text-decoration: none;
