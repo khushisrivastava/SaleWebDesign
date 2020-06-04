@@ -1,6 +1,6 @@
 #product-overview{
     background: linear-gradient(to top, rgba(80, 68, 18, 0) 5%, transparent), 
-        url("images/freedom.jpg") left 10% top 20%/cover no-repeat border-box, 
+        url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box, 
         #ff1b68;
     /* background-size: cover;
     background-repeat: no-repeat;
@@ -9,46 +9,41 @@
     background-clip: border-box; */
     /* background-image: linear-gradient(to right, red, purple); */
     /* background-image: radial-gradient(farthest-side at top left, red, purple); */
-    width: 100vw;
-    height: 40vh;
+    /* width: 100vw; */
+    height: 45vh;
     margin-top: 2.75rem;
     position: relative;
 }
-.section-title{
-    color: #2ddf5c;
-    text-align: center;
-}
 #product-overview h1{
-    color: rgb(51, 17, 4);
-    /* color: white; */
+    color: white;
+    /* color: rgb(250, 175, 246); */
     font-family: 'Anton', sans-serif;
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     left: 3%;
+    font-size: 1.6rem;
+    margin-bottom: 0px;
 }
-#plans{
-    width: 80%;
-    margin: auto;
+.section-title{
+    color: #2ddf5c;
     text-align: center;
 }
 .plan{
    background: #d5ffdc;
    text-align: center;
    padding: 1rem;
-   margin: 0.5rem;
-   display: inline-block; 
-   width: 30%;
-   vertical-align: middle;
+   margin: 0.5rem 0;
+   width: 100%;
 }
 .plan--highlighted{
     background: #19b84c;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .plan__annotation{
     background: white;
+    text-align: center;
     color: #19b84c;
-    padding: 1rem;
+    padding: 0.5rem;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
@@ -86,11 +81,6 @@
     margin: 0;
     padding: 0;
     text-align: center;
-}
-.key-features__list li{
-    display: inline-block;
-    width: 32%;
-    vertical-align: top;
 }
 .key-features__list div{
     margin: auto;
@@ -144,9 +134,43 @@
   background: red;
   border-color: red;
 }
-
 .modal__action--negative:hover,
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+@media (min-width: 40rem){
+    #product-overview{
+        height: 60vh;
+        background-position: 10% 20%;
+    }
+    #product-overview h1{
+        font-size: 2rem;
+    }
+    #plans{
+        width: 100%;
+        text-align: center;
+    }
+    .plan{
+        display: inline-block;
+        width: 30%;
+        vertical-align: middle;
+        min-width: 12.8rem;
+        max-width: 16rem;
+        height: 100%;
+    }
+    .plan--highlighted{
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+    .key-features__list li{
+        display: inline-block; 
+        width: 32%;
+        vertical-align: top;
+        max-width: 20rem;
+    }
+}
+@media (min-width: 60rem){
+    #product-overview{
+        height: 80vh;
+    }
 }
