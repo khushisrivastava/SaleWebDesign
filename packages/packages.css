@@ -76,3 +76,17 @@ main{
 #premium .package__subtitle{
     color: #bbbbbb;
 }
+@media (min-width: 40rem){
+    main{
+        margin: 3rem auto;
+        max-width: 73rem;
+    }
+}
+@media (min-width: 73rem){
+    .package{
+        border-left: solid #0e4f1f 4px;
+    } 
+    #free{
+        border-right: solid #0e4f1f 4px;
+    }   
+}
