@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 main{
-    min-height: calc(100vh - 3.1875rem - 8rem);
+    min-height: calc(100vh - 3.125rem - 6.125rem);
 }
 .backdrop{
     position: fixed;
