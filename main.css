@@ -80,7 +80,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 .key-features__list div{
     margin: auto;
@@ -150,25 +149,32 @@
 }
 @media (min-width: 40rem){
     
-    #plans{
+    .plans{
         width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .plan{
-        display: inline-block;
         width: 30%;
-        vertical-align: middle;
         min-width: 12.8rem;
-        max-width: 16rem;
-        height: 100%;
+        max-width: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25rem;
     }
     .plan--highlighted{
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        height: 30rem;
+        z-index: 1;
+    }
+    .key-features__list{
+        display: flex;
+        justify-content: center;
     }
     .key-features__list li{
-        display: inline-block; 
         width: 32%;
-        vertical-align: top;
         max-width: 20rem;
     }
 }
