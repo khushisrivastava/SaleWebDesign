@@ -18,6 +18,7 @@ main{
     border-left: none;
     margin: 1rem 0px;
     position: relative;
+    overflow: hidden;
 }
 .package:hover,
 .package:active{
@@ -34,11 +35,14 @@ main{
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.2rem;
+    margin: 0;
     padding: 0.8rem;
     color: white;
     background: #ff5454;
     font-size: 20px;
+    transform: rotateZ(45deg) translateX(6.80rem) translateY(-2.5rem);
+    width: 22rem;
+    text-align: center;
 }
 .package__subtitle{
     color: #979797;
