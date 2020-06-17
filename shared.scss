@@ -1,0 +1,233 @@
+$header-size: 3.125rem;
+$colors: (highlight: #ff1b68, dark-green: #0e4f1f);
+*{
+    box-sizing: border-box;
+}
+@mixin display-flex() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding-top: $header-size;
+    @supports(display: grid){
+            height: 100%;
+            display: grid;
+            grid-template-rows: $header-size auto fit-content(8rem);
+            padding-top: 0rem;
+    }
+}
+main{
+    grid-row: 2 / 3;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+.main-header{
+    @include display-flex();
+    background: #2ddf5c;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    z-index: 2;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle-button{
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: {
+        top: 0;
+        bottom: 0;
+    }
+    vertical-align: middle;
+    :focus{
+        outline: none;
+    }
+}
+.toggle-button__bar{
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+.main-header_brand{
+    color: map-get($map: $colors, $key: dark-green);
+    text-decoration: none;
+    font-weight: bold;
+    img{
+        height: 2.5rem;
+        vertical-align: middle;
+    }
+}
+.main-nav{
+    display: none;
+}
+.main-nav_items{
+    @include display-flex();
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-nav_item{
+    margin: 1rem;
+    a{
+        color: map-get($map: $colors, $key: dark-green);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.2rem 0;
+        &:hover,
+        &:active{
+            color: white;
+            border-bottom: 5px solid white;
+        }
+    }
+}
+.cta{
+    color: white;
+    background: map-get($map: $colors, $key: highlight);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    &:hover,
+    &:active{
+        color: map-get($map: $colors, $key: highlight);
+        background: white;
+        border: none;
+    }
+}
+.main-nav_item--cta{
+    animation: wiggle 400ms 3s 8 ease-out;
+    a{
+        @extend .cta;
+    }
+}
+.mobile-nav_item--cta a{
+    @extend .cta;
+}
+.main-footer{
+    background: black;
+    padding: 1rem;
+    margin-top: 3rem;
+    grid-row: 3 / 4;
+    ul{
+        @include display-flex();
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    li{
+        margin-top: 0.5rem;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        &:hover,
+        &:active{
+            color: #cccccc;
+        }
+    }
+}
+.mobile-nav{
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 50%;
+    height: 100vh;
+}
+.mobile-nav_items{
+    @include display-flex();
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.mobile-nav_item{
+    margin: 1rem 0;
+    a{
+        font-size: 1.5rem;
+        color: map-get($map: $colors, $key: dark-green);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.2rem 0;
+    }
+}
+.button{
+    background: map-get($map: $colors, $key: dark-green);
+    color: white;
+    font: inherit;
+    border: 1.5px map-get($map: $colors, $key: dark-green) solid;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover,
+    &:active{
+        background: white;
+        color: map-get($map: $colors, $key: dark-green);
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.open{
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+@media (min-width: 40rem) {
+    .toggle-button{
+        display: none;
+    }
+    .main-nav{
+        @include display-flex();
+    }
+    .main-footer ul{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .main-footer li{
+        margin: 0 1rem;
+    }
+}
+@keyframes wiggle{
+    0%{
+        transform: rotateZ(0) translateX(0);
+    }
+    50%{
+        transform: rotateZ(-10deg) translateX(-0.2rem);
+    }
+    to{
+        transform: rotateZ(10deg) translateX(0.2rem);
+    }
+}
